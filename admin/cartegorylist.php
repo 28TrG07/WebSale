@@ -4,7 +4,7 @@ include "slider.php";
 include "clas/cartegory_class.php";
 ?>
 <?php
-$cartgory = new cartegory
+$cartgory = new cartegory;
 $show_cartegory = $cartgory ->show_cartegory();
 ?>
 
@@ -26,7 +26,7 @@ $show_cartegory = $cartgory ->show_cartegory();
                     <td><?php echo $i ?></td>
                     <td><?php echo $result['cartegory_id'] ?></td>
                     <td><?php echo $result['cartegory_name'] ?></td>
-                    <td><a href="Sửa"></a>| <a href="Xóa"></a></td>
+                    <td><a href="cartegoryedit.php?cartegory_id=<?php echo $result['cartegory_id'] ?> ">Sửa</a>| <a href="cartegorydelete.php?cartegory_id=<?php echo $result['cartegory_id'] ?>">Xóa</a></td>
                  </tr>
                  <?php 
                  }
